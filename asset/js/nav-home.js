@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if($(this).scrollTop()>=300){
+            $("#navbar").addClass("new-nav");
+        }
+        else{
+            $("#navbar").removeClass("new-nav");
+        }
+    });
+});
