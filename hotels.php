@@ -60,32 +60,19 @@
 
     <section class="data">
         <div class="container">
-             <?php
-            $args = array(
-                    'post_type' =>'hotels',
-                'posts_per_page' => 3
-
-            );
-                $hotel = new WP_Query( $args );
-
-            if ( $hotel->have_posts() ) {
-
-                while ( $hotel->have_posts() ) {
-                    $hotel->the_post(); ?>
-                      <div class="row mr-b-5">
+            <div class="row mr-b-5">
                 <div class="col-12">
                     <div class="bg-contant no-padding">
                         <div class="row no-gutters">
-                            
                             <div class="col-md-4">
-                                    <?php echo the_post_thumbnail('thumbnail', array('class' => 'img-fluid img-hotel')); ?>
+                                <img src="asset/images/2.jpg" class="img-fluid img-hotel">
                             </div>
                             <div class="col-md-8">
                                 <div class="row no-gutters">
                                     <div class="col-md-9">
                                         <div class="data-hotel">
                                             <h4 class="b-inline">
-                                                <a href="#"><?php the_title(); ?></a>
+                                                <a href="#">فندق المشتل</a>
                                             </h4>
                                             <div class="rate b-inline">
                                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -95,7 +82,8 @@
                                                 <i class="fa fa-star" aria-hidden="true"></i>
                                             </div>
                                             <p class="some-details">
-                                                <?php  the_content(); ?>                                            </p>
+                                                هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة
+                                            </p>
                                             <a href="#" class="btn btn-more">المزيد</a>
                                         </div>
                                     </div>
@@ -114,14 +102,178 @@
                     </div>
                 </div>
             </div>
-             <?php   }
 
-                wp_reset_postdata();
-            } else {
-              echo "Sorry No Post";
-            }
-            ?>
-            
+            <div class="row mr-b-5">
+                <div class="col-12">
+                    <div class="bg-contant no-padding">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="asset/images/2.jpg" class="img-fluid img-hotel">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row no-gutters">
+                                    <div class="col-md-9">
+                                        <div class="data-hotel">
+                                            <h4 class="b-inline">
+                                                <a href="#">فندق المشتل</a>
+                                            </h4>
+                                            <div class="rate b-inline">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <p class="some-details">
+                                                هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة
+                                            </p>
+                                            <a href="#" class="btn btn-more">المزيد</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="room_price">
+                                            <div class="room_price_inner">
+                                                <span class="room_price_number"> $89,00  </span>
+                                                <small class="upper"> في الليلة </small>
+                                                <a href="room.html" class="btn button upper btn_book">حجز الآن</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mr-b-5">
+                <div class="col-12">
+                    <div class="bg-contant no-padding">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="asset/images/2.jpg" class="img-fluid img-hotel">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row no-gutters">
+                                    <div class="col-md-9">
+                                        <div class="data-hotel">
+                                            <h4 class="b-inline">
+                                                <a href="#">فندق المشتل</a>
+                                            </h4>
+                                            <div class="rate b-inline">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <p class="some-details">
+                                                هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة
+                                            </p>
+                                            <a href="#" class="btn btn-more">المزيد</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="room_price">
+                                            <div class="room_price_inner">
+                                                <span class="room_price_number"> $89,00  </span>
+                                                <small class="upper"> في الليلة </small>
+                                                <a href="room.html" class="btn button upper btn_book">حجز الآن</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mr-b-5">
+                <div class="col-12">
+                    <div class="bg-contant no-padding">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="asset/images/2.jpg" class="img-fluid img-hotel">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row no-gutters">
+                                    <div class="col-md-9">
+                                        <div class="data-hotel">
+                                            <h4 class="b-inline">
+                                                <a href="#">فندق المشتل</a>
+                                            </h4>
+                                            <div class="rate b-inline">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <p class="some-details">
+                                                هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة
+                                            </p>
+                                            <a href="#" class="btn btn-more">المزيد</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="room_price">
+                                            <div class="room_price_inner">
+                                                <span class="room_price_number"> $89,00  </span>
+                                                <small class="upper"> في الليلة </small>
+                                                <a href="room.html" class="btn button upper btn_book">حجز الآن</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mr-b-5">
+                <div class="col-12">
+                    <div class="bg-contant no-padding">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="asset/images/2.jpg" class="img-fluid img-hotel">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row no-gutters">
+                                    <div class="col-md-9">
+                                        <div class="data-hotel">
+                                            <h4 class="b-inline">
+                                                <a href="#">فندق المشتل</a>
+                                            </h4>
+                                            <div class="rate b-inline">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <p class="some-details">
+                                                هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة هنا نص تجريبي يسف الخدمة
+                                            </p>
+                                            <a href="#" class="btn btn-more">المزيد</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="room_price">
+                                            <div class="room_price_inner">
+                                                <span class="room_price_number"> $89,00  </span>
+                                                <small class="upper"> في الليلة </small>
+                                                <a href="room.html" class="btn button upper btn_book">حجز الآن</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
