@@ -76,7 +76,7 @@ function hotelPost(){
         'labels'=> $labels,
         'public'=>true,
         'menu_position'=> 5,
-        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments','custom-fields'  )
     );
     register_post_type( 'hotels', $args );
 }
