@@ -165,6 +165,8 @@ section.hotels .card h4{
 }
 section.hotels .card img{
     height: 245px;
+    max-width: 100%;
+    min-width: 100%;
 }
 section.hotels .card p{
     color: #2d3e52;
