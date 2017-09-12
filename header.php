@@ -53,10 +53,15 @@
                     <a href="#">اقراء المزيد</a>
                   </div>
                 </div>
-                <!--  <div class="carousel-item " style="
+                  <div class="carousel-item " style="
                     background-image: url('<?php echo $uri('asset/images/slider/2.jpg') ?>');
                 ">
-                </div> -->
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>أقم أكثر وأدفع أقل</h3>
+                    <p>احجز 5 ليالي أو أكثر واحصل على خصم 20%</p>
+                    <a href="#">اقراء المزيد</a>
+                  </div>
+                </div> 
               </div>
               <a class="carousel-control-prev" href="#carousel_header" role="button" data-slide="prev">
                  <img src="<?php echo $uri('asset/images/slider/left.png') ?>" width="35">
