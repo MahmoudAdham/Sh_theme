@@ -12,6 +12,7 @@ a:hover{
 nav.navbar {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
+    background-color: rgba(57,65,72,.7);
 }
 .navbar-light .navbar-nav .nav-link{
     color: #fff;
@@ -34,7 +35,7 @@ nav.navbar {
     width: 48%;
 }
 .navbar-brand img{
-    width: 66%;
+    width: 50%;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
@@ -45,7 +46,7 @@ nav.navbar.new-nav .navbar-brand img {
     width: 60%;
 }
 ul.navbar-nav {
-    margin-top: 16px !important;
+    margin-top: 6px !important;
 }
 nav.navbar.new-nav ul.navbar-nav li a.nav-link {
     color: #fff;
@@ -63,17 +64,46 @@ nav.navbar.new-nav ul.navbar-nav li a.nav-link.active {
     margin-top: 13px !important;
 }
 #home {
-    background-image: url(../images/bg-header.jpg);
+    /*background-image: url(../images/bg-header.jpg);*/
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
 }
-
+#home #carousel_header .carousel-inner .carousel-item{
+    background-position: 50% 50% ;
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+}
+/*#home .overlay{
+    background:rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}*/
+#home .carousel-caption{
+    top: 37vh;
+}
+#home .carousel-caption h3{
+    font-size: 50px;
+}
+#home .carousel-caption a{
+    border:1px solid #FFF;
+    padding: 8px 20px;
+    color: #FFF;
+}
+#home .carousel-caption p{
+    font-size: 20px;
+    margin-top: 13px;
+    margin-bottom: 30px;
+}
+.carousel-control-next, .carousel-control-prev{
+    opacity: 1;
+}
 #home .overlay  .search{
     padding: 15px;
-    background: rgba(0, 0, 0, 0.5);
-    top: 45vh;
-    position: relative;
+    position: absolute;
+    top: -160px;
+    right: 0;
+    left: 0;
 }
 #home .overlay  .search .nav-tabs {
     border-bottom: 0;

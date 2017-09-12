@@ -42,6 +42,32 @@
 <?php if( is_home() ) {?>
     <header id="home">
         <div class="overlay">
+            <div id="carousel_header" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" style="
+                    background-image: url('<?php echo $uri('asset/images/slider/1.jpg') ?>');
+                ">
+                 <div class="carousel-caption d-none d-md-block">
+                    <h3>أقم أكثر وأدفع أقل</h3>
+                    <p>احجز 5 ليالي أو أكثر واحصل على خصم 20%</p>
+                    <a href="#">اقراء المزيد</a>
+                  </div>
+                </div>
+                <!--  <div class="carousel-item " style="
+                    background-image: url('<?php echo $uri('asset/images/slider/2.jpg') ?>');
+                ">
+                </div> -->
+              </div>
+              <a class="carousel-control-prev" href="#carousel_header" role="button" data-slide="prev">
+                 <img src="<?php echo $uri('asset/images/slider/left.png') ?>" width="35">
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel_header" role="button" data-slide="next">
+                <img src="<?php echo $uri('asset/images/slider/right.png') ?>" width="35">
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+
             <?php get_search_form(); ?>
         </div>
     </header>

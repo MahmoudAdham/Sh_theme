@@ -14,8 +14,8 @@
         <!-- Tab panes -->
         <div class="tab-content">
             <div class="tab-pane active" id="flight" role="tabpanel">
-                <h3>أين تريد أن تذهب ؟</h3>
-
+              <!--   <h3>أين تريد أن تذهب ؟</h3>
+ -->
                 <form action="">
                     <div class="row no-gutters">
                         <div class="col-md-3 mr-l-form">
@@ -54,7 +54,7 @@
                 </form>
             </div>
             <div class="tab-pane" id="profile" role="tabpanel">
-                <h3>أبحث عن الفندق المناسب</h3>
+              <!--   <h3>أبحث عن الفندق المناسب</h3> -->
                 <form action="">
                     <div class="row no-gutters">
                         <div class="col-md-3 mr-l-form">
