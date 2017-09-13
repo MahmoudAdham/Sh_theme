@@ -1,6 +1,8 @@
 <?php /* Template Name: Hotel */
 
   get_header(); ?>
+
+
 <section class="content">
 
     <div class="bg-title">
@@ -60,57 +62,53 @@
 
     <section class="data">
         <div class="container">
+            <div id="all_hotels" class="row">
+               <?php
+               $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
-            <?php
-            $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-
-            $custom_args = array(
+                $custom_args = array(
                 'post_type' => 'hotels',
                 'posts_per_page' => 4,
                 'paged' => $paged
-            );
+                );
 
-            $custom_query = new WP_Query( $custom_args );
+                $custom_query = new WP_Query( $custom_args );
+               if ( $custom_query->have_posts() ) {
 
-            if ( $custom_query->have_posts() ) {
-
-                while ( $custom_query->have_posts() ) {
-                    $custom_query->the_post(); ?>
-                    <div class="row mr-b-5">
-                        <div class="col-12">
-                            <div class="bg-contant no-padding">
+                   while ( $custom_query->have_posts() ) {
+                       $custom_query->the_post(); ?>
+                <div class="mr-b-5 item col-12">
+                    <div class="bg-contant no-padding">
+                        <div class="row no-gutters">
+                            <div class="item2 col-md-4">
+                                <?php echo get_the_post_thumbnail(); ?>
+                            </div>
+                            <div class="item2 col-md-8">
                                 <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <?php echo get_the_post_thumbnail(); ?>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-9">
-                                                <div class="data-hotel">
-                                                    <h4 class="b-inline">
-                                                        <a href="#"><?php the_title(); ?></a>
-                                                    </h4>
-                                                    <div class="rate b-inline">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div>
-                                                    <p class="some-details">
-                                                        <?php the_content() ?>
-                                                    </p>
-                                                    <a href="#" class="btn btn-more">المزيد</a>
-                                                </div>
+                                    <div class="item2 col-md-9">
+                                        <div class="data-hotel">
+                                            <h4 class="b-inline">
+                                                <a href="#"><?php the_title(); ?></a>
+                                            </h4>
+                                            <div class="rate b-inline">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
                                             </div>
-                                            <div class="col-md-3">
-                                                <div class="room_price">
-                                                    <div class="room_price_inner">
-                                                        <span class="room_price_number"> $89,00  </span>
-                                                        <small class="upper"> في الليلة </small>
-                                                        <a href="room.html" class="btn button upper btn_book">حجز الآن</a>
-                                                    </div>
-                                                </div>
+                                            <p class="some-details">
+                                                <?php the_content(); ?>
+                                            </p>
+                                            <a href="<?php get_permalink()?>" class="btn btn-more">المزيد</a>
+                                        </div>
+                                    </div>
+                                    <div class="item2 col-md-3">
+                                        <div class="room_price">
+                                            <div class="room_price_inner">
+                                                <span class="room_price_number"> $89,00  </span>
+                                                <small class="upper"> في الليلة </small>
+                                                <a href="<?php get_permalink()?>" class="btn button upper btn_book">حجز الآن</a>
                                             </div>
                                         </div>
                                     </div>
@@ -118,27 +116,25 @@
                             </div>
                         </div>
                     </div>
+                </div>
+               <?php   }
 
-                <?php   }
-                if (function_exists(custom_pagination)) {
-                    custom_pagination($custom_query->max_num_pages,"",$paged);
-                }
-                wp_reset_postdata();
-            }
+               wp_reset_postdata();
+               }
 
-            else {
-                echo "Sorry No Post";
-            }
-
-    ?>
-
+               else {
+                   echo "Sorry No Post";
+               } ?>
+            </div>
+    <?php  if (function_exists(custom_pagination)) {
+        custom_pagination($custom_query->max_num_pages,"",$paged);
+    }?>
         </div>
     </section>
 
 
 
 </section>
-
 
 <?php get_footer(); ?>
 <script>
