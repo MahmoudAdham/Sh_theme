@@ -247,6 +247,8 @@ section.places h3::after{
 }
 section.places img{
     height: 185px;
+    max-width: 100%;
+    min-width:100%;
 }
 section.places a{
     display: block;
@@ -983,4 +985,85 @@ nav.navbar button.navbar-toggler {
 .custom-pagination span.current {
   background-color: #ff3c50;
   color: #fff;
+}
+
+
+/***************/
+
+.hotel-slider .item{
+    margin-bottom: 60px;
+}
+.content-slider li{
+    background-color: #ed3020;
+    text-align: center;
+    color: #FFF;
+}
+
+.hotel-slider{
+    width: 800px;
+}
+.hotel-section{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 156px;
+    padding-bottom: 50px;
+}
+
+.gallery li>img{
+    width: 100%;
+}
+
+.lSAction > .lSNext {
+    right:28px;
+}
+.hotel-details{
+    direction: rtl;
+}
+.features>row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.lSSlideOuter .lSPager.lSGallery img{
+    width:100vh;
+    height: 10vh;
+}
+.progress{
+    background-color: #FFFFFF;
+    border: solid #dddddd 1px;
+    margin-top: 5px;
+
+}
+
+.progress-title>h1{
+    margin-right: 10px;
+}
+.map-img{
+    margin-top: 10px;
+}
+
+.gallery li>img {
+    max-height:400px;
+}
+
+.hotel-details h1{
+    color: #5bc0de;
+}
+
+.hotel-title h1{
+    color: #d9534f;
+}
+.map-img{
+    margin-top:55px;
+}
+.progress-row{
+    padding-top: 14px;
+}
+
+.rate .fa-star, .fa-star-half-o{
+    color: yellow;
+}
+.booking-btn{
+    font-family: ar-font;
+    outline: 0;
 }

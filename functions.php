@@ -22,6 +22,10 @@ function styleTheme(){
     if (is_home()){
         wp_enqueue_script('sh_nav_js', get_theme_file_uri('asset/js/nav-home.js'), array(),false, true);
     }
+    if (is_single()) {
+        wp_enqueue_style('lightSlider_css', get_theme_file_uri('asset/css/lightslider.css'));
+        wp_enqueue_script('lightSlider_js', get_theme_file_uri('asset/js/lightslider.js'), array(),false, true);
+    }
 }
 add_action('wp_enqueue_scripts','styleTheme');
 

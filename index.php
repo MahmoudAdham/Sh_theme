@@ -23,7 +23,9 @@
                         <div class="card">
                             <?php echo get_the_post_thumbnail(); ?>
                             <div class="card-block">
-                                <h4 class="card-title"><?php the_title(); ?></h4>
+                                <h4 class="card-title">
+                                    <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
+                                </h4>
                                 <p class="card-text"> <?php  the_content(); ?> </p>
                                 <a href="#" class="btn btn-primary">حجز</a>
                             </div>
@@ -37,73 +39,38 @@
             }
             ?>
 
-<!--            <div class="col-md-4 mb-4">-->
-<!--                <div class="card">-->
-<!--                    <img class="img-fluid" src="--><?php //echo $uri('asset/images/2.jpg')?><!--" alt="Card image cap">-->
-<!--                    <div class="card-block">-->
-<!--                        <h4 class="card-title">فندق الموفمبيك</h4>-->
-<!--                        <p class="card-text">هنا نص تجريبي يوصف الخدمةهنا نص تجريبي يوصف الخدمة هنا نص تجريبي يوصف الخدمةهنا نص تجريبي يوصف الخدمة</p>-->
-<!--                        <a href="#" class="btn btn-primary">حجز</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4 mb-4">-->
-<!--                <div class="card">-->
-<!--                    <img class="img-fluid" src=" --><?php //echo $uri('asset/images/3.jpg') ?><!--" alt="Card image cap">-->
-<!--                    <div class="card-block">-->
-<!--                        <h4 class="card-title">فندق روتانا</h4>-->
-<!--                        <p class="card-text">هنا نص تجريبي يوصف الخدمةهنا نص تجريبي يوصف الخدمة هنا نص تجريبي يوصف الخدمةهنا نص تجريبي يوصف الخدمة </p>-->
-<!--                        <a href="#" class="btn btn-primary">حجز</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
         </div>
     </div>
 </section>
 
+ <!-- get post touristicplaces -->
+ <?php
+            $args = array(
+                'post_type' =>'touristic_places',
+                'posts_per_page' => 8,
+            );
+            $places = new WP_Query( $args );
+ ?>
 <section class="places" id="places">
     <div class="container">
         <h3>أماكن سياحية</h3>
         <div class="row">
-            <div class="col-md-3">
-                <img src="<?php echo $uri('asset/images/4.jpg') ?>" class="img-fluid" >
-                <a href="#">شرم الشيخ</a>
-            </div>
+            <?php
+            if ( $places->have_posts() ) {
+               while($places->have_posts()) {
+                   $places->the_post(); ?>
+                <div class="col-md-3">
+                    <?php echo get_the_post_thumbnail(); ?>
+                    <a href="#"><?php the_title(); ?></a>
+                </div>
+                <?php
+               }
+            }
+            else{
+                echo "Sorry, No Post";
+            }
+            ?>
 
-            <div class="col-md-3">
-                <img src="<?php echo $uri('asset/images/5.jpg')?>" class="img-fluid" >
-                <a href="#">شرم الشيخ</a>
-            </div>
-
-            <div class="col-md-3">
-                <img src="<?php echo $uri('asset/images/6.jpg')?>" class="img-fluid" >
-                <a href="#">شرم الشيخ</a>
-            </div>
-
-            <div class="col-md-3">
-                <img src="<?php echo $uri('asset/images/7.jpg')?>" class="img-fluid" >
-                <a href="#">شرم الشيخ</a>
-            </div>
-
-            <div class="col-md-3">
-                <img src="<?php echo $uri('asset/images/5.jpg')?>" class="img-fluid" >
-                <a href="#">شرم الشيخ</a>
-            </div>
-
-            <div class="col-md-3">
-                <img src="<?php echo $uri('asset/images/6.jpg')?>" class="img-fluid" >
-                <a href="#">شرم الشيخ</a>
-            </div>
-
-            <div class="col-md-3">
-                <img src="<?php echo $uri('asset/images/7.jpg')?>" class="img-fluid" >
-                <a href="#">شرم الشيخ</a>
-            </div>
-
-            <div class="col-md-3">
-                <img src="<?php echo $uri('asset/images/4.jpg')?>" class="img-fluid" >
-                <a href="#">شرم الشيخ</a>
-            </div>
         </div>
     </div>
 </section>
