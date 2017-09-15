@@ -828,6 +828,12 @@ nav.navbar button.navbar-toggler {
     background-size: cover;
     padding: 50px 20px;
 }
+.top-bg-offer{
+    background-image: url(../images/slider/2.jpg);
+    background-position: center center;
+    background-size: cover;
+   height: 50vh;
+}
 .btn-more{
     background-color: #273649;
     color: #FFF;
@@ -1066,4 +1072,8 @@ nav.navbar button.navbar-toggler {
 .booking-btn{
     font-family: ar-font;
     outline: 0;
+}
+.offers-title{
+    text-align: center;
+    padding-top: 100px;
 }
