@@ -294,7 +294,7 @@ function touristic_places() {
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
     );
-    register_post_type( 'touristic_places', $args );
+    register_post_type( 'touristicPlaces', $args );
 
 }
 add_action( 'init', 'touristic_places', 0 );
