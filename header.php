@@ -32,7 +32,7 @@
             'menu_class' => 'navbar-nav mr-auto',
             'container_class' =>'collapse navbar-collapse',
             'container_id' => 'navbarSupportedContent',
-            'walker' => new bs4navwalker()
+             'walker'         => new bootstrap_4_walker_nav_menu()
         ))
         ?>
 

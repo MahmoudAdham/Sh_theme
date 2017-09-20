@@ -126,10 +126,10 @@
 
 
                     if ( $the_services->have_posts() ) {
-
+                            $i = 0;
                         while ( $the_services->have_posts() ) {
                             $the_services->the_post();
-                            if ($the_services->current_post % 2 != 0){
+                            if ($i % 2 != 0){
                                 ?>
                                 <div class="media">
                                     <i class="fa fa-plane fa-2x align-self-start ml-3" aria-hidden="true"></i>
@@ -144,7 +144,7 @@
                                 </div>
 
                             <?php
-                        }}
+                        } $i++;}
                         wp_reset_postdata();
                     } else {
                         echo "Sorry, No Post";
@@ -362,6 +362,7 @@
     </div>
 </section>
 
+ <div></div>
 
 <?php get_footer(); ?>
 
