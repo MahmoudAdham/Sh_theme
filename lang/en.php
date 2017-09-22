@@ -1,7 +1,7 @@
 <?php
 
 $lang = array(
-    'Hotel'         =>'Hotels',
+    'hotel'         =>'Hotels',
     'general_tours' =>'General Tours',
     'places' =>'Touristic Places',
 );

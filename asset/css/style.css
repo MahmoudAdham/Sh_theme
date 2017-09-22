@@ -418,7 +418,7 @@ section.offer .card{
 }
 section.offer .card h4 {
     color: #838383;
-    font-size: 19px;
+    font-size: 17px;
 }
 section.offer .card ul{
     padding:0;
@@ -430,21 +430,28 @@ section.offer .card ul li {
     padding-right: 22px;
     font-size: 15px;
 }
-section.offer .card ul li::before {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    font-size: 15px;
-    line-height: 25px;
+section.offer .card ul li .fa{
     color: #e2534b;
-    font-family: FontAwesome;
-    content: "\f00c";
-    z-index: 5;
+    font-size: 18px;
+    padding-left: 11px;
+    width: 31px;
+    text-align: center;
 }
+/*section.offer .card ul li::before {*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*right: 0px;*/
+    /*font-size: 15px;*/
+    /*line-height: 25px;*/
+    /*color: #e2534b;*/
+    /*font-family: FontAwesome;*/
+    /*content: "\f00c";*/
+    /*z-index: 5;*/
+/*}*/
 section.offer .card a{
     display: block;
     color: #fff;
-    background-color: #d9d9d9;
+    background-color: #e2534b;
     text-align: center;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -453,7 +460,7 @@ section.offer .card a{
     transition: all 0.5s ease;
 }
 section.offer .card a:hover{
-    background-color: #01b7f2;
+    background-color: #d9d9d9;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }

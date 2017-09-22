@@ -165,88 +165,64 @@
 </section>
 
 <section class="offer" id="offer">
+
+    <?php
+    $args = array(
+        'post_type' =>'tours',
+        'posts_per_page' => 3,
+    );
+    $tours = new WP_Query( $args );
+    ?>
     <div class="container">
-        <h3>عروض خاصة</h3>
+        <h3>برامج سياحية</h3>
         <div class="item-offer text-center">
             <input id="item-type-all" name="radio-set-1" type="radio" class="item-type-all" checked="checked">
             <label for="item-type-all" class="label-type-all">الكل</label>
 
-            <input id="item-type-1" name="radio-set-1" type="radio" class="item-type-1">
-            <label for="item-type-1" class="label-type-1">باريس</label>
-
-            <input id="item-type-2" name="radio-set-1" type="radio" class="item-type-2">
-            <label for="item-type-2" class="label-type-2">القاهرة</label>
-
-            <input id="item-type-3" name="radio-set-1" type="radio" class="item-type-3">
-            <label for="item-type-3" class="label-type-3">لندن</label>
+            <?php
+            if ( $tours->have_posts() ) {
+//            while ( $tours->have_posts() ) {
+//            $tours->the_post();
+//            ?>
+<!--            <input id="item-type-all" name="radio-set-1" type="radio" class="item-type-all">-->
+<!--            <label for="item-type-all" class="label-type-all">--><?php //the_category(',');  ?><!--</label>-->
+<!--            --><?php //} ?>
 
             <div class="row items">
-                <div class="col-md-3 col-sm-6 item item-type-1">
+                <?php
+                while ( $tours->have_posts() ) {
+                $tours->the_post();
+                ?>
+                <div class="col-md-4 col-sm-6 item item-type-1">
                     <div class="card">
                         <img class="img-fluid" src="<?php echo $uri('asset/images/1.jpg')?>" alt="Card image cap">
                         <div class="card-block">
-                            <h4 class="card-title">فندق الديرة</h4>
+                            <h4 class="card-title"><?php the_title() ?></h4>
                              <hr>
                             <ul class="list-unstyled">
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                            </ul>
-                            <hr>
-                            <a href="#">احجز الآن</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 item item-type-3">
-                    <div class="card">
-                        <img class="img-fluid" src="<?php echo $uri('asset/images/1.jpg')?>" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">فندق الديرة</h4>
-                            <hr>
-                            <ul class="list-unstyled">
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                            </ul>
-                            <hr>
-                            <a href="#">احجز الآن</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 item item-type-2">
-                    <div class="card">
-                        <img class="img-fluid" src="<?php echo $uri('asset/images/1.jpg')?>" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">فندق الديرة</h4>
-                            <hr>
-                            <ul class="list-unstyled">
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                            </ul>
-                            <hr>
-                            <a href="#">احجز الآن</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 item item-type-2">
-                    <div class="card">
-                        <img class="img-fluid" src="<?php echo $uri('asset/images/1.jpg')?>" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">فندق الديرة</h4>
-                            <hr>
-                            <ul class="list-unstyled">
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
-                                <li>فندق 5 نجوم</li>
+                                <div class="row">
+                                    <li class="col-sm-6">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <?php echo get_post_meta(get_the_ID(),'location',true); ?>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <?php echo get_post_meta(get_the_ID(),'period',true); ?>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <i class="fa fa-car" aria-hidden="true"></i>
+                                        <?php echo get_post_meta(get_the_ID(),'driver',true); ?>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        <?php echo get_post_meta(get_the_ID(),'tour',true); ?>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-usd" aria-hidden="true"></i>
+                                        <?php echo get_post_meta(get_the_ID(),'price',true); ?>
+                                    </li>
+                                </div>
+
                             </ul>
                             <hr>
                             <a href="#">احجز الآن</a>
@@ -254,7 +230,18 @@
                     </div>
                 </div>
 
+                    <?php
+                }
+                wp_reset_postdata();
+
+                ?>
+
             </div>
+<?php
+            } else {
+                echo "Sorry, No Post";
+            }
+?>
         </div>
     </div>
 </section>
