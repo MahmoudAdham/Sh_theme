@@ -95,10 +95,10 @@
                     $the_services = new WP_Query( $args );
 
                     if ( $the_services->have_posts() ) {
-
+                        $i = 0;
                         while ( $the_services->have_posts() ) {
                             $the_services->the_post();
-                            if ($the_services->current_post % 2 == 0){ ?>
+                            if ($i % 2 == 0){ ?>
                             <div class="media">
                                 <div class="media-body">
                                     <h5 class="mt-0">
@@ -111,7 +111,7 @@
                                 <i class="fa fa-plane fa-2x align-self-start mr-3" aria-hidden="true"></i>
                             </div>
 
-                        <?php }}
+                        <?php }$i++;}
                         wp_reset_postdata();
                     }else {
                        echo "Sorry, No Post";
@@ -225,7 +225,7 @@
 
                             </ul>
                             <hr>
-                            <a href="#">احجز الآن</a>
+                            <a href="<?php echo get_permalink();?>">احجز الآن</a>
                         </div>
                     </div>
                 </div>

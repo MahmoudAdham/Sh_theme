@@ -5,7 +5,7 @@ get_header(); ?>
     <div class="top-bg-offer"></div>
     <section class="data offers-section">
         <div class="title">
-            <h1>العروض</h1>
+            <h1>برامجنا</h1>
         </div>
         <div class="container">
             <!-- Nav tabs -->
@@ -13,21 +13,36 @@ get_header(); ?>
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#home" role="tab">
                         <i class="fa fa-university" aria-hidden="true"></i>
-                        عروض فنادق
+                        برامج سياحية
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#profile" role="tab">
                         <i class="fa fa-plane" aria-hidden="true"></i>
-                        عروض رحلات</a>
+         جولات خاصة</a>
                 </li>
             </ul><!-- Tab panes -->
+            <?php
+            $args = array(
+                'post_type' =>'tours',
+                'posts_per_page' => 4,
+            );
+            $custom_query = new WP_Query( $args );
+            if ( $custom_query->have_posts() ) {
+            ?>
             <div class="tab-content">
                 <div class="tab-pane active" id="home" role="tabpanel">
+                    <?php
+                    $i = 0;
+                    while ( $custom_query->have_posts() ) {
+                        $custom_query->the_post();
+                        if ($i % 2 == 0){
+                        ?>
+
                     <div class="card card-block">
                         <div class="row no-gutters">
                             <div class="col-md-6">
-                                <h1 class="mt-5">احجز غرفتك مبكرا - ادفع أقل</h1>
+                                <h1 class="mt-5"><?php the_title(); ?></h1>
                                 <p>قمنا بتصميم عرض لك لتبقى معنا لفترة أطول. احجز 21 يوما مقدما واحصل على خصم 15٪ على أفضل سعر متوفر</p>
                                 <div class="price">
                                     <span class="apd">ابتداء من</span> <span class="from">298</span> <span class="currency">درهم اماراتى</span>
@@ -42,13 +57,18 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
+                            <?php }
+                            else{
+
+                            ?>
+
                     <div class="card card-block">
                         <div class="row no-gutters">
                             <div class="col-md-6">
                                 <img src="<?php echo $uri('asset/images/3.jpg')?>">
                             </div>
                             <div class="col-md-6">
-                                <h1 class="mt-5">احجز غرفتك مبكرا - ادفع أقل</h1>
+                                <h1 class="mt-5"><?php the_title(); ?></h1>
                                 <p>قمنا بتصميم عرض لك لتبقى معنا لفترة أطول. احجز 21 يوما مقدما واحصل على خصم 15٪ على أفضل سعر متوفر</p>
                                 <div class="price">
                                     <span class="apd">ابتداء من</span> <span class="from">298</span> <span class="currency">درهم اماراتى</span>
@@ -60,11 +80,18 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
+                    <?php }
+                 $i++;   } ?>
                 </div>
+
+
                 <div class="tab-pane" id="profile" role="tabpanel">
                     ...
                 </div>
             </div>
+            <?php }
+            ?>
+
         </div>
     </section>
 </section><?php get_footer(); ?>
