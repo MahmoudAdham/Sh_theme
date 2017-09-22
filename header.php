@@ -11,6 +11,7 @@
     wp_head();
 
     $uri = get_theme_file_uri;
+    
     ?>
 </head>
 <body data-spy="scroll" data-target=".navbar" >

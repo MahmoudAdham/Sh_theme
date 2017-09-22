@@ -1,10 +1,16 @@
  <?php get_header();
  $uri = get_theme_file_uri;
+ if (ICL_LANGUAGE_CODE == 'en'){
+     include_once 'lang/en.php';
+ }
+ else{
+     include_once 'lang/ar.php';
+ }
  ?>
 
 <section class="hotels" id="hotels">
     <div class="container">
-        <h3>الفنادق الموصى بها</h3>
+        <h3><?php echo $lang['hotel']; ?></h3>
         <div class="row">
 
             <?php
@@ -180,7 +186,7 @@
                         <img class="img-fluid" src="<?php echo $uri('asset/images/1.jpg')?>" alt="Card image cap">
                         <div class="card-block">
                             <h4 class="card-title">فندق الديرة</h4>
-                            <hr>
+                             <hr>
                             <ul class="list-unstyled">
                                 <li>فندق 5 نجوم</li>
                                 <li>فندق 5 نجوم</li>

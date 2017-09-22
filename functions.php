@@ -1,68 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Geek
- * Date: 8/18/2017
- * Time: 9:23 PM
- */
-require_once('bs4navwalker.php');
-add_theme_support( 'post-thumbnails' );
-/************************* Start Function Style ****************/
-function styleTheme(){
-    wp_enqueue_style('sh_STYLE', get_stylesheet_uri());
-    wp_enqueue_style('sh_bootstrap', get_theme_file_uri('asset/css/bootstrap.min.css'));
-    wp_enqueue_style('sh_fontawesom', get_theme_file_uri('asset/css/font-awesome.min.css'));
-    wp_enqueue_style('sh_date', get_theme_file_uri('asset/css/bootstrap-datepicker.standalone.min.css'));
-    wp_enqueue_style('sh_style2', get_theme_file_uri('asset/css/style.css'));
-    wp_enqueue_script('sh_jquery', get_theme_file_uri('asset/js/jquery-3.1.1.min.js'));
-    wp_enqueue_script('sh_tether_js', ('https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js'));
-    wp_enqueue_script('sh_bootstrap_js', get_theme_file_uri('asset/js/bootstrap.min.js'));
-    wp_enqueue_script('sh_date_js', get_theme_file_uri('asset/js/bootstrap-datetimepicker.min.js'), array(),false,true);
-    wp_enqueue_script('sh_nicescroll', get_theme_file_uri('asset/js/jquery.nicescroll.min.js'), array(),false, true);
-    wp_enqueue_script('sh_js', get_theme_file_uri('asset/js/js.js'), array(),false, true);
-    if (is_home()){
-        wp_enqueue_script('sh_nav_js', get_theme_file_uri('asset/js/nav-home.js'), array(),false, true);
-    }
 
-        wp_enqueue_style('lightSlider_css', get_theme_file_uri('asset/css/lightslider.css'));
-        wp_enqueue_script('lightSlider_js', get_theme_file_uri('asset/js/lightslider.js'), array(),false, true);
+include_once 'includes/theme-support.php';              // Theme Support
+include_once 'includes/scripts.php';                    // Scripts
 
-    if(ICL_LANGUAGE_CODE == 'en'){ //Ar
-        wp_enqueue_style( 'ltr-style', get_theme_file_uri('asset/css/ltr-style.css'));
-    }
- }
-add_action('wp_enqueue_scripts','styleTheme');
 
-/************************* End Function Style ****************/
-/////////////////////////////////////////////////////////////////////
-
-/************************* Start Function for top_nav ****************/
-
-function sh_register_menu(){
-    register_nav_menu( 'top_nave', 'Top Navigation' );
-}
-add_action('init','sh_register_menu');
-
-//
-//function My_Theme_nav_menu_link_atts( $atts) {
-//    $new_atts = array( 'class' => 'nav-link' .' '.'scroll'  );
-//    if ( isset( $atts['href'] ) ) {
-//        $new_atts['href'] = $atts['href'];
-//    }
-//
-//    return $new_atts;
-//}
-//add_filter( 'nav_menu_link_attributes', 'My_Theme_nav_menu_link_atts');
-
-/************************* End Function for top_nav ****************/
-/////////////////////////////////////////////////////////////////////
 /************************* Start Offers Custom Post ****************/
 
-function offersPost(){
+function generalTours(){
     $labels = array(
-        'name'=>'Offers',
-        'singular_name'=>'Offer',
-         'menu_name'             => __( 'offers', 'text_domain' ),
+        'name'=>'Tours',
+        'singular_name'=>'Tour',
+         'menu_name'             => __( 'Tours', 'text_domain' ),
         'name_admin_bar'        => __( 'Post Type', 'text_domain' ),
         'archives'              => __( 'Item Archives', 'text_domain' ),
         'attributes'            => __( 'Item Attributes', 'text_domain' ),
@@ -107,9 +55,9 @@ function offersPost(){
         'capability_type'       => 'page',
         'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments','custom-fields' )
     );
-    register_post_type( 'offers', $args );
+    register_post_type( 'tours', $args );
 }
-add_action( 'init', 'offersPost' );
+add_action( 'init', 'generalTours' );
 /************************* End Offers Custom Post ****************/
 /////////////////////////////////////////////////////////////////////
 /************************* Start Hotel Custom Post ****************/
