@@ -201,23 +201,23 @@
                              <hr>
                             <ul class="list-unstyled">
                                 <div class="row">
-                                    <li class="col-sm-6">
+                                    <li class="col-6">
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                                         <?php echo get_post_meta(get_the_ID(),'location',true); ?>
                                     </li>
-                                    <li class="col-sm-6">
+                                    <li class="col-6">
                                         <i class="fa fa-calendar" aria-hidden="true"></i>
                                         <?php echo get_post_meta(get_the_ID(),'period',true); ?>
                                     </li>
-                                    <li class="col-sm-6">
+                                    <li class="col-6">
                                         <i class="fa fa-car" aria-hidden="true"></i>
                                         <?php echo get_post_meta(get_the_ID(),'driver',true); ?>
                                     </li>
-                                    <li class="col-sm-6">
+                                    <li class="col-6">
                                         <i class="fa fa-clock-o" aria-hidden="true"></i>
                                         <?php echo get_post_meta(get_the_ID(),'tour',true); ?>
                                     </li>
-                                    <li>
+                                    <li class="col-6">
                                         <i class="fa fa-usd" aria-hidden="true"></i>
                                         <?php echo get_post_meta(get_the_ID(),'price',true); ?>
                                     </li>

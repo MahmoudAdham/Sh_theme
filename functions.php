@@ -15,5 +15,3 @@ include_once 'includes/cpt-services.php';                      // Services Tours
 
 
 
-
-

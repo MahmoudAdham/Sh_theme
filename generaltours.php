@@ -43,13 +43,33 @@ get_header(); ?>
                         <div class="row no-gutters">
                             <div class="col-md-6">
                                 <h1 class="mt-5"><?php the_title(); ?></h1>
-                                <p>قمنا بتصميم عرض لك لتبقى معنا لفترة أطول. احجز 21 يوما مقدما واحصل على خصم 15٪ على أفضل سعر متوفر</p>
+                                <ul class="list-unstyled">
+                                    <div class="row">
+                                        <li class="col-6 col-sm-3">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <?php echo get_post_meta(get_the_ID(),'location',true); ?>
+                                        </li>
+                                        <li class="col-6 col-sm-3">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            <?php echo get_post_meta(get_the_ID(),'period',true); ?>
+                                        </li>
+                                        <li class="col-6 col-sm-3">
+                                            <i class="fa fa-car" aria-hidden="true"></i>
+                                            <?php echo get_post_meta(get_the_ID(),'driver',true); ?>
+                                        </li>
+                                        <li class="col-6 col-sm-3">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <?php echo get_post_meta(get_the_ID(),'tour',true); ?>
+                                        </li>
+                                    </div>
+
+                                </ul>
                                 <div class="price">
-                                    <span class="apd">ابتداء من</span> <span class="from">298</span> <span class="currency">درهم اماراتى</span>
+                                    <span class="apd">فقط بمبلغ </span> <span class="from"> <?php echo get_post_meta(get_the_ID(),'price',true); ?></span> <span class="currency">دولار امريكي</span>
                                 </div>
                                 <div class="btn-group mt-5">
-                                    <a href="#" class="btn">احجز الان</a>
-                                    <a href="#" class="btn">اعرف أكثر</a>
+                                    <a href="<?php echo get_permalink();?>" class="btn">احجز الان</a>
+                                    <a href="<?php echo get_permalink();?>" class="btn">اعرف أكثر</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -69,9 +89,29 @@ get_header(); ?>
                             </div>
                             <div class="col-md-6">
                                 <h1 class="mt-5"><?php the_title(); ?></h1>
-                                <p>قمنا بتصميم عرض لك لتبقى معنا لفترة أطول. احجز 21 يوما مقدما واحصل على خصم 15٪ على أفضل سعر متوفر</p>
+                                <ul class="list-unstyled">
+                                    <div class="row">
+                                        <li class="col-6 col-sm-3">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <?php echo get_post_meta(get_the_ID(),'location',true); ?>
+                                        </li>
+                                        <li class="col-6 col-sm-3">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            <?php echo get_post_meta(get_the_ID(),'period',true); ?>
+                                        </li>
+                                        <li class="col-6 col-sm-3">
+                                            <i class="fa fa-car" aria-hidden="true"></i>
+                                            <?php echo get_post_meta(get_the_ID(),'driver',true); ?>
+                                        </li>
+                                        <li class="col-6 col-sm-3">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <?php echo get_post_meta(get_the_ID(),'tour',true); ?>
+                                        </li>
+                                    </div>
+
+                                </ul>
                                 <div class="price">
-                                    <span class="apd">ابتداء من</span> <span class="from">298</span> <span class="currency">درهم اماراتى</span>
+                                    <span class="apd">فقط بمبلغ </span> <span class="from"> <?php echo get_post_meta(get_the_ID(),'price',true); ?></span> <span class="currency">دولار امريكي</span>
                                 </div>
                                 <div class="btn-group mt-5">
                                     <a href="#" class="btn">احجز الان</a>
