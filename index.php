@@ -215,7 +215,7 @@
                                     </li>
                                     <li class="col-6">
                                         <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                        <?php echo get_post_meta(get_the_ID(),'tour',true); ?>
+                                        <?php echo get_post_meta(get_the_ID(),'t_duration',true); ?>
                                     </li>
                                     <li class="col-6">
                                         <i class="fa fa-usd" aria-hidden="true"></i>

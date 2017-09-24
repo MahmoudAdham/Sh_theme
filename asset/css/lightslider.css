@@ -47,9 +47,9 @@
 .lSSlideWrapper .lSFade > * {
     position: absolute !important;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 9;
-    margin-right: 0;
+    margin-left: 0;
     width: 100%;
 }
 .lSSlideWrapper.usingCss .lSFade > * {
@@ -109,7 +109,7 @@
 /** Gallery */
 .lSSlideOuter .lSPager.lSGallery {
     list-style: none outside none;
-    padding-left: 0;
+    padding-right: 0;
     margin: 0;
     overflow: hidden;
     transform: translate3d(0px, 0px, 0px);
@@ -168,11 +168,11 @@
 }
 .lSAction > .lSPrev {
     background-position: 0 0;
-    left: 10px;
+    right: 10px;
 }
 .lSAction > .lSNext {
     background-position: -32px 0;
-    right: 10px;
+    left: 10px;
 }
 .lSAction > a.disabled {
     pointer-events: none;
@@ -190,11 +190,11 @@
     position: relative;
 }
 .lSSlideOuter.vertical.noPager {
-    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 .lSSlideOuter.vertical .lSGallery {
     position: absolute !important;
-    right: 0;
+    left: 0;
     top: 0;
 }
 .lSSlideOuter.vertical .lightSlider > * {
@@ -204,8 +204,8 @@
 
 /* vertical controlls */
 .lSSlideOuter.vertical .lSAction > a {
-    left: 50%;
-    margin-left: -14px;
+    right: 50%;
+    margin-right: -14px;
     margin-top: 0;
 }
 .lSSlideOuter.vertical .lSAction > .lSNext {
@@ -223,47 +223,47 @@
 
 /* Rtl */
 .lSSlideOuter.lSrtl {
-    direction: rtl;
+    direction: ltr;
 }
 .lSSlideOuter .lightSlider, .lSSlideOuter .lSPager {
-    padding-left: 0;
+    padding-right: 0;
     list-style: none outside none;
 }
 .lSSlideOuter.lSrtl .lightSlider, .lSSlideOuter.lSrtl .lSPager {
-    padding-right: 0;
+    padding-left: 0;
 }
 .lSSlideOuter .lightSlider > *,  .lSSlideOuter .lSGallery li {
-    float: left;
+    float: right;
 }
 .lSSlideOuter.lSrtl .lightSlider > *,  .lSSlideOuter.lSrtl .lSGallery li {
-    float: right !important;
+    float: left !important;
 }
 /* Rtl */
 
 @-webkit-keyframes rightEnd {
     0% {
-        left: 0;
+        right: 0;
     }
 
     50% {
-        left: -15px;
+        right: -15px;
     }
 
     100% {
-        left: 0;
+        right: 0;
     }
 }
 @keyframes rightEnd {
     0% {
-        left: 0;
+        right: 0;
     }
 
     50% {
-        left: -15px;
+        right: -15px;
     }
 
     100% {
-        left: 0;
+        right: 0;
     }
 }
 @-webkit-keyframes topEnd {
@@ -294,28 +294,28 @@
 }
 @-webkit-keyframes leftEnd {
     0% {
-        left: 0;
+        right: 0;
     }
 
     50% {
-        left: 15px;
+        right: 15px;
     }
 
     100% {
-        left: 0;
+        right: 0;
     }
 }
 @keyframes leftEnd {
     0% {
-        left: 0;
+        right: 0;
     }
 
     50% {
-        left: 15px;
+        right: 15px;
     }
 
     100% {
-        left: 0;
+        right: 0;
     }
 }
 @-webkit-keyframes bottomEnd {
@@ -376,17 +376,17 @@
 }
 /*/  GRab cursor */
 .lightSlider.lsGrab > * {
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: -o-grab;
-  cursor: -ms-grab;
-  cursor: grab;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
 }
 .lightSlider.lsGrabbing > * {
-  cursor: move;
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: -o-grabbing;
-  cursor: -ms-grabbing;
-  cursor: grabbing;
+    cursor: move;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: -o-grabbing;
+    cursor: -ms-grabbing;
+    cursor: grabbing;
 }

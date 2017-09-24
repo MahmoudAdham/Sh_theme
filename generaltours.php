@@ -64,6 +64,7 @@ get_header(); ?>
                                     </div>
 
                                 </ul>
+                                <p><?php the_excerpt(); ?></p>
                                 <div class="price">
                                     <span class="apd">فقط بمبلغ </span> <span class="from"> <?php echo get_post_meta(get_the_ID(),'price',true); ?></span> <span class="currency">دولار امريكي</span>
                                 </div>
