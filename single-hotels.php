@@ -15,14 +15,17 @@ $uri = get_theme_file_uri;
         <div class="hotel-slider" style="max-width:100%;">
             <div class="item" >
                 <div class="clearfix" style="max-width:100%;">
-                    <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                        <li data-thumb="<?php echo $uri('asset/images/44.jpg')?> ">
-                            <img src="<?php echo $uri('asset/images/44.jpg')?>">
-                        </li>
-                        <li data-thumb="<?php echo $uri('asset/images/11.jpg')?> ">
-                            <img src="<?php echo $uri('asset/images/11.jpg')?>">
-                        </li>
-                    </ul>
+<!--                    <ul id="image-gallery" class="gallery list-unstyled cS-hidden">-->
+<!--                        --><?php
+//                        while ( have_posts() ) {
+//                        the_post();
+//                        ?>
+<!--                        <li data-thumb="--><?php //echo the_post_thumbnail_url(); ?><!--">-->
+<!--                            <img src="--><?php //the_post_thumbnail_url(); ?><!--">-->
+<!--                        </li>-->
+<!--                        --><?php //} ?>
+<!--                    </ul>-->
+                    <?php the_content() ?>
                 </div>
             </div>
 

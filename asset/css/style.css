@@ -14,12 +14,16 @@ nav.navbar {
     transition: all 1s ease;
     background-color: rgba(57,65,72,.7);
 }
+.dropdown-menu{
+    min-width: 5rem;
+    border-radius: 0;
+}
 .navbar-light .navbar-nav .nav-link{
     color: #fff;
     font-size: 16px;
     line-height: 40px;
-    padding-right:20px;
-    padding-left: 20px;
+    padding-right:10px;
+    padding-left: 10px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
@@ -46,7 +50,7 @@ nav.navbar.new-nav .navbar-brand img {
     width: 60%;
 }
 ul.navbar-nav {
-    margin-top: 6px !important;
+    margin-top: 0px !important;
 }
 nav.navbar.new-nav ul.navbar-nav li a.nav-link {
     color: #fff;
@@ -61,7 +65,7 @@ nav.navbar.new-nav ul.navbar-nav li a.nav-link.active {
     background-color: #16aeca;
 }
 .new-nav ul.navbar-nav {
-    margin-top: 13px !important;
+    margin-top: 0px !important;
 }
 #home {
     /*background-image: url(../images/bg-header.jpg);*/
@@ -414,7 +418,7 @@ section.offer .card{
 }
 section.offer .card h4 {
     color: #838383;
-    font-size: 19px;
+    font-size: 17px;
 }
 section.offer .card ul{
     padding:0;
@@ -426,21 +430,37 @@ section.offer .card ul li {
     padding-right: 22px;
     font-size: 15px;
 }
-section.offer .card ul li::before {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    font-size: 15px;
-    line-height: 25px;
+section.offer .card ul li .fa{
     color: #e2534b;
-    font-family: FontAwesome;
-    content: "\f00c";
-    z-index: 5;
+    font-size: 18px;
+    padding-left: 11px;
+    width: 31px;
+    text-align: center;
 }
+.card ul{
+    padding: 0;
+    margin-right: 20px;
+}
+.tab-content .card ul li .fa{
+    color: #e2534b;
+    font-size: 18px;
+    padding-left: 5px;
+}
+/*section.offer .card ul li::before {*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*right: 0px;*/
+    /*font-size: 15px;*/
+    /*line-height: 25px;*/
+    /*color: #e2534b;*/
+    /*font-family: FontAwesome;*/
+    /*content: "\f00c";*/
+    /*z-index: 5;*/
+/*}*/
 section.offer .card a{
     display: block;
     color: #fff;
-    background-color: #d9d9d9;
+    background-color: #e2534b;
     text-align: center;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -449,7 +469,7 @@ section.offer .card a{
     transition: all 0.5s ease;
 }
 section.offer .card a:hover{
-    background-color: #01b7f2;
+    background-color: #d9d9d9;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
@@ -1116,10 +1136,14 @@ nav.navbar button.navbar-toggler {
 }
 .offers-section .tab-content .card p, .offers-section .tab-content .card .price{
     width: 98%;
-    font-size: 15px;
+    font-size: 17px;
     margin-right: 20px;
+    margin-top: 30px;
 }
-
+.offers-section .tab-content .card .price .from{
+    color: #e2534b;
+    font-weight: bold;
+}
 .offers-section .card-block{
     padding: 0;
 }
@@ -1137,6 +1161,7 @@ nav.navbar button.navbar-toggler {
     background-color: #FFF;
     color: #e2534b;
 }
+<<<<<<< HEAD
 
 /* ***************************** tour places style********************* */
 .tour-slider{
@@ -1190,3 +1215,16 @@ nav.navbar button.navbar-toggler {
 .place-description h2{
     color: #8b0000;
 }
+=======
+.card ul{
+    padding: 0;
+    margin-right: 20px;
+}
+.title-post-tours{
+    color: #e2534b;
+}
+.title-post-tours span{
+    font-size:20px;
+    color: #000;
+}
+>>>>>>> 8055bfe4c58a6454ab340bb22d9323d40bb4200c
