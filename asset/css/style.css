@@ -1137,3 +1137,56 @@ nav.navbar button.navbar-toggler {
     background-color: #FFF;
     color: #e2534b;
 }
+
+/* ***************************** tour places style********************* */
+.tour-slider{
+    background-image: url("../images/tourBackground.jpg");
+    background-size: cover;
+    background-position:center;;
+    min-height: 70vh;
+    color: whitesmoke;
+    text-align: center;
+    overflow: hidden;
+}
+
+.tour-title{
+    margin-right: 0px;
+    margin-left: 0px;
+
+}
+.tour-slider-col{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+
+.tour-slider h1{
+    margin-top: 10%;
+}
+
+.tour-content{
+
+    right: 10%;
+    top: -22vh;
+    position: relative;
+    z-index: 1;
+
+    background: #eeeeee;
+    width: 80%;
+}
+
+.place-description{
+    padding:20px;
+}
+
+.place-description h2{
+    font-size:1.5rem;;
+}
+.about-place h3{
+    color: #5f9aff;
+    font-size: 1.5rem;
+}
+.place-description h2{
+    color: #8b0000;
+}
